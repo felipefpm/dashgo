@@ -11,10 +11,6 @@ export function ActiveLink({ children, shouldMatchExectHref = false, ...rest }: 
   const { asPath } = useRouter()
   let isActive = false;
 
-  // if(asPath === rest.href || asPath === rest.as) {
-  //   isActive = true;
-  // }
-
   if (shouldMatchExectHref && (asPath === rest.href || asPath === rest.as)) {
     isActive = true;
   }
